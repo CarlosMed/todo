@@ -1,0 +1,27 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.6",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.2.0",
+    "mocha-http": "^0.2.5"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "export NODE_ENV=dev; nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Carlos Medina (http://carlos-medina.me/)",
+  "license": "MIT"
+}

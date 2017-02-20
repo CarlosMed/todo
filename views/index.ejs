@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>
+		<%= message %>
+	</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<h1><%= message %></h1>
+	<form>
+		<textarea type="text" name="todo" id="todo" placeholder="What's there to do?" autofocus></textarea>
+		<button type="submit">Submit</button>
+	</form>
+	<div id="todo-container">
+		<ul>
+			<% for (var i = 0; i < todos.length; i++) { -%>
+				<section class="todo-wrapper">
+					<li>
+						<%= todos[i].todo %>
+					</li>
+					<div class="delete" data-id='<%= todos[i]._id %>'>✕</div>
+					<div class="done">✓</div>
+				</section>
+				<% } -%>
+		</ul>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="js/scripts.js"></script>
+</body>
+
+</html>
